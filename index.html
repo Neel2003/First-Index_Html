@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        body {
-            background-image: url(./lake.jfif);
-            background-repeat: no-repeat;
+        .back-video{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        @media (min-aspect-ratio: 16/9){
+            .back-video{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio: 16/9){
+            .back-video{
+                width: auto;
+                height: 100%;
+            }
         }
     </style>
 </head>
 <body >
+    <video autoplay loop muted playsinline class="back-video">
+        <source src="www.KeepVid.to--4k-Marvel-Edit-www-youtube-com-1080p-1e603c9a0393830016e0adb9cac0c23a-1080p.mp4" type="video/mp4">
+    </video>
     <H1><marquee>INDEX PAGE</marquee></H1>
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -47,15 +65,46 @@
 
     <form action="">
         <label for="fname">Username</label>
-        <input type="text" placeholder="Enter First Name" id="fname"> <br>
+        <input type="text" placeholder="Enter First Name" id="fname">
+
+        <br><br>
 
         <label for="pwd">Password</label>
-        <input type="password" placeholder="Enter your Password" id="pwd"><br>
+        <input type="password" placeholder="Enter your Password" id="pwd">
+        
+        <br><br>
 
         <label for="regC">Country</label>
-        <input type="text" value="India" placeholder="Enter your Country Name" id="regC"> <br>
+        <input type="text" value="India" placeholder="Enter your Country Name" id="regC"> 
+        
+        <br><br>
+
+        <label for="">Favourite Food</label>
+        <input type="checkbox" name="Chinese" class="chkbx1">
+        <label for="chkbx1">Chinese</label>
+        <input type="checkbox" name="Italian" class="chkbx1">
+        <label for="chkbx1">Italian</label>
+        <input type="checkbox" name="Mexicon" class="chkbx1">
+        <label for="chkbx1">Mexicon</label>
+        <input type="checkbox" name="Garbag" class="chkbx1">
+        <label for="chkbx1">Garbag</label>
+        
+        <br><br>
+        
+        <label for="">Favourite Sport</label>
+        <input type="radio" name="rb1">
+        <label for="rb1">Cricket</label>
+        <input type="radio" name="rb1">
+        <label for="rb1">VolleyBall</label>
+        <input type="radio" name="rb1">
+        <label for="rb1">BasketBall</label>
+        <input type="radio" name="rb1">
+        <label for="rb1">Hockey</label>
+        
+        <br><br>
 
         <input type="submit" name="" id="">
+        <button type="reset">Reset</button>
     </form>
 
     </form>
